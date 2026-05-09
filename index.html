@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loen 개발 동아리</title>
+  <title>Loen | 개발 동아리</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Intro Animation Overlay -->
+  <div class="intro-overlay" id="introOverlay">
+    <img src="로고.png" alt="Loen Logo" class="intro-logo">
+  </div>
+
   <header class="site-header">
     <nav class="nav" aria-label="주요 메뉴">
       <a class="brand" href="index.html">
-        <img src="로고.png" alt="Loen 로고">
-        <span>Loen 개발 동아리</span>
+        <span>Loen</span>
       </a>
       <div class="nav-links">
         <a class="active" href="index.html">홈</a>
@@ -23,61 +27,27 @@
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <div>
-          <p class="eyebrow">Build, ship, learn together</p>
-          <h1>Loen 개발 동아리의 소식을 한 곳에서 확인하세요.</h1>
-          <p class="hero-copy">
-            공지사항과 베타 테스트 안내를 모바일과 웹에서 깔끔하게 볼 수 있는 공식 안내 페이지입니다.
-            GitHub Pages 기반으로 운영되어 새 HTML 파일을 푸시하면 바로 배포할 수 있습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="notices.html">공지사항 보기</a>
-          </div>
+        <span class="eyebrow">Build, ship, learn together</span>
+        <h1>Loen 개발 동아리</h1>
+        <div class="hero-actions">
+          <a class="button primary" href="notices.html">공지사항 확인하기</a>
+          <a class="button secondary" href="OBS_Beta_Test_Guide.html">베타 테스트 가이드</a>
         </div>
-        <div class="preview" aria-label="OBS 앱 화면 미리보기">
-          <div class="phone first">
-            <img src="OBS첫화면.png" alt="OBS 앱 첫 화면">
-          </div>
-          <div class="phone second">
-            <img src="OBS보기.png" alt="OBS 보기 화면">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <h2>최근 공지</h2>
-          <p>동아리 운영과 프로젝트 테스트에 필요한 중요한 안내를 먼저 보여줍니다.</p>
-        </div>
-        <a class="card-link" href="notices.html">전체 공지 보기</a>
-      </div>
-      <div class="grid">
-        <article class="card featured">
-          <div class="meta">
-            <span class="tag">베타 테스트</span>
-            <time datetime="2026-05-09">2026.05.09</time>
-          </div>
-          <h3>OBS 복습 서비스 베타 테스트 가이드</h3>
-          <p>OBS 복습 서비스의 테스트 목적, 접속 링크, 주요 기능, 피드백 제출 안내를 확인할 수 있습니다.</p>
-          <a class="card-link" href="OBS_Beta_Test_Guide.html">가이드 열기</a>
-        </article>
-        <article class="card">
-          <div class="meta">
-            <span class="tag">공지</span>
-            <time datetime="2026-05-09">2026.05.09</time>
-          </div>
-          <h3>Loen 개발 동아리 공지 페이지 오픈</h3>
-          <p>앞으로 동아리 공지는 이 페이지를 통해 공유됩니다.</p>
-          <a class="card-link" href="notices.html">자세히 보기</a>
-        </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <small>&copy; 2026 Loen 개발 동아리. All rights reserved.</small>
+    <p>&copy; 2026 Loen. All rights reserved.</p>
   </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      const overlay = document.getElementById('introOverlay');
+      setTimeout(() => {
+        overlay.classList.add('fade-out');
+      }, 1800); // 1.8초 후 페이드 아웃 시작
+    });
+  </script>
 </body>
 </html>
