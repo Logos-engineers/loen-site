@@ -6,7 +6,6 @@
 
 - `index.html`: 홈
 - `notices.html`: 공지사항
-- `events.html`: 이벤트
 - `OBS_Beta_Test_Guide.html`: OBS 복습 서비스 베타 테스트 가이드
 - `styles.css`: 공통 스타일
 
@@ -18,4 +17,4 @@
 4. Branch는 `main`, folder는 `/root`를 선택합니다.
 5. 저장 후 안내되는 GitHub Pages URL로 접속합니다.
 
-공지나 이벤트를 수정할 때는 HTML 파일을 수정한 뒤 다시 푸시하면 됩니다.
+공지를 수정할 때는 HTML 파일을 수정한 뒤 다시 푸시하면 됩니다.
