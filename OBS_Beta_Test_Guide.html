@@ -85,6 +85,11 @@
             font-weight: 600;
         }
 
+        .feature-item strong.inline {
+            display: inline;
+            margin-bottom: 0;
+        }
+
         .feature-item p {
             margin: 0;
             font-size: 0.95rem;
@@ -158,9 +163,6 @@
 <body>
 
 <div class="container">
-    <div style="text-align: center; margin-bottom: 20px;">
-        <svg width="200" height="115" viewBox="268 122 512 296" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><defs><clipPath id="clip0"><rect x="268" y="122" width="512" height="296"/></clipPath><clipPath id="clip1"><rect x="268" y="122" width="512" height="296"/></clipPath><image width="512" height="296" xlink:href="data:image/png;base64,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??" preserveAspectRatio="none" id="img2"></image><clipPath id="clip3"><rect x="0" y="0" width="6502400" height="3759200"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-268 -122)"><g clip-path="url(#clip1)"><g transform="matrix(7.87402e-05 0 0 7.87402e-05 268 122)"><g clip-path="url(#clip3)"><use width="100%" height="100%" xlink:href="#img2" opacity="1" transform="scale(12700 12700)"></use></g></g></g></g></svg>
-    </div>
     <header>
         <p>로엔(LOEN) 팀 안내</p>
         <h1>OBS 복습 서비스 베타 테스트 가이드</h1>
@@ -179,7 +181,7 @@
     <div class="card">
         <h2>접속 및 데이터 안내</h2>
         <div class="feature-item">
-            <p>본 테스트 버전에는 <strong>2026년 진행된 모든 OBS 자료</strong>가 업로드되어 있습니다.</p>
+            <p>본 테스트 버전에는 <strong class="inline">2026년 진행된 모든 OBS 자료</strong>가 업로드되어 있습니다.</p>
         </div>
         <div class="info-box">
             <strong>테스트 접속 링크</strong><br>
