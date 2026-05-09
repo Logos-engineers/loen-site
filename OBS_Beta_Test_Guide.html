@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBS 복습 서비스 베타 테스트 가이드</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+        }
+
+        .card h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--primary-color);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .feature-item {
+            margin-bottom: 15px;
+        }
+
+        .feature-item strong {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .info-box {
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .link-button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <svg width="200" height="115" viewBox="268 122 512 296" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><defs><clipPath id="clip0"><rect x="268" y="122" width="512" height="296"/></clipPath><clipPath id="clip1"><rect x="268" y="122" width="512" height="296"/></clipPath><image width="512" height="296" xlink:href="data:image/png;base64,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??" preserveAspectRatio="none" id="img2"></image><clipPath id="clip3"><rect x="0" y="0" width="6502400" height="3759200"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-268 -122)"><g clip-path="url(#clip1)"><g transform="matrix(7.87402e-05 0 0 7.87402e-05 268 122)"><g clip-path="url(#clip3)"><use width="100%" height="100%" xlink:href="#img2" opacity="1" transform="scale(12700 12700)"></use></g></g></g></g></svg>
+    </div>
+    <header>
+        <p>로엔(LOEN) 팀 안내</p>
+        <h1>OBS 복습 서비스 베타 테스트 가이드</h1>
+    </header>
+
+    <!-- 1. 인사말 및 목적 -->
+    <div class="card">
+        <h2>테스트 목적</h2>
+        <p style="margin: 0; font-size: 0.95rem;">
+            안녕하세요, 로엔 팀장 남현서입니다. OBS 복습 서비스 베타 테스팅에 참여해 주셔서 감사합니다.<br><br>
+            이번 테스트는 지난 수년간 진행해 온 OBS 방식에 <strong>'앱을 통한 복습 기능'</strong>을 도입하기에 앞서, 실제 서비스의 실효성과 적절성을 검토하기 위해 마련되었습니다. 여러분의 소중한 의견이 서비스의 완성도를 결정합니다.
+        </p>
+    </div>
+
+    <!-- 2. 접속 안내 -->
+    <div class="card">
+        <h2>접속 및 데이터 안내</h2>
+        <div class="feature-item">
+            <p>본 테스트 버전에는 <strong>2026년 진행된 모든 OBS 자료</strong>가 업로드되어 있습니다.</p>
+        </div>
+        <div class="info-box">
+            <strong>테스트 접속 링크</strong><br>
+            <a href="https://obs-beta-web.vercel.app/" class="link-button">서비스 접속하기</a>
+        </div>
+    </div>
+
+    <!-- 3. 주요 기능 -->
+    <div class="card">
+        <h2>테스트 주요 기능</h2>
+        <div class="feature-item">
+            <strong>1. 복습하기 (퀴즈)</strong>
+            <p>매주 3개의 퀴즈가 생성됩니다. 퀴즈를 풀며 지난 주 진행된 OBS 내용을 빠르고 가볍게 상기할 수 있습니다.</p>
+        </div>
+        <div class="feature-item" style="margin-bottom: 0;">
+            <strong>2. OBS 아카이빙 및 기록</strong>
+            <p>아카이빙된 OBS 자료를 보며 각 질문에 대한 생각과 실천 과제(적용하기)를 기록할 수 있습니다.</p>
+            <p style="margin-top: 8px; font-size: 0.85rem; color: #3b82f6;">*정식 서비스 시, 기록한 '적용하기' 질문은 홈 화면 위젯 및 푸시 알림을 통해 주중에도 지속적으로 노출될 예정입니다.</p>
+        </div>
+    </div>
+
+    <!-- 4. 검토 요청 사항 -->
+    <div class="card" style="border: 1px solid #bfdbfe; background-color: #eff6ff;">
+        <h2 style="color: #1e40af;">중점 검토 포인트</h2>
+        <ul class="check-list">
+            <li>이 기능이 이전 주차 내용을 복습하는 데 실질적인 도움이 되는가?</li>
+            <li>복습하기(퀴즈 및 기록) 과정에서 느껴지는 불편함이나 개선점은 없는가?</li>
+            <li>제공되는 요약 자료의 내용이 적절하고 이해하기 쉬운가?</li>
+        </ul>
+    </div>
+
+    <!-- 5. 피드백 제출 -->
+    <div class="card">
+        <h2>피드백 제출 안내</h2>
+        <p style="margin: 0; font-size: 0.95rem;">
+            테스트는 <strong>3주간</strong> 진행됩니다. 종료 후 제공해 드리는 구글 폼을 통해 자유로운 의견을 남겨주시면 감사하겠습니다. 테스트 기간은 진행 중 변경될 수 있습니다.
+        </p>
+    </div>
+
+    <!-- 6. 맺음말 -->
+    <div class="card">
+        <h2>안내 사항</h2>
+        <p style="margin: 0; font-size: 0.9rem; color: var(--text-light);">
+            본 서비스는 테스트 목적으로 운영되므로 일부 디자인이나 세부 수치는 변경될 수 있습니다. 귀한 시간을 내어 참여해 주심에 다시 한번 감사드립니다.
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2026 LOEN Team. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
