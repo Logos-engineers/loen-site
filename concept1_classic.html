@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시안 01. 클래식 센터 (v2) - RESET 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; background-color: #ffffff; color: #1e293b; letter-spacing: -0.02em; scroll-behavior: smooth; }
+        .navy-point { color: #0f172a; }
+        .bg-navy { background-color: #0f172a; }
+        .placeholder { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; }
+        .hover-lift { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08); }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body>
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-100">
+        <div class="max-w-screen-xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-bold text-xl tracking-tighter navy-point uppercase">RESET 2026</a>
+            <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-400">
+                <a href="#info" class="hover:text-navy-point transition-colors">Information</a>
+                <a href="#schedule" class="hover:text-navy-point transition-colors">Schedule</a>
+                <a href="#kit" class="hover:text-navy-point transition-colors">Welcome Kit</a>
+                <a href="#notice" class="hover:text-navy-point transition-colors">Notice</a>
+            </div>
+            <button class="bg-navy text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-all shadow-lg shadow-navy/10">RESET 시작하기</button>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-32 md:py-48 px-6 overflow-hidden">
+            <div class="max-w-screen-md mx-auto text-center relative z-10">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-slate-100 text-[10px] font-bold navy-point rounded-full mb-8 tracking-widest uppercase">
+                    <span>2026 Summer Youth RESET</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold navy-point leading-[1.1] mb-10">모든 것이 <br class="md:hidden">다시 시작되는 순간</h1>
+                <p class="text-lg md:text-xl text-slate-500 leading-relaxed mb-16 font-light max-w-xl mx-auto">
+                    과거의 짐을 내려놓고, 본연의 모습으로 돌아가는 시간.<br>
+                    2026 수련회 RESET에서 당신의 영적 상태를 다시 설정하세요.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <a href="#info" class="w-full md:w-auto px-8 py-4 bg-navy text-white rounded-2xl font-bold text-sm shadow-xl shadow-navy/20 hover:scale-105 transition-transform">수련회 가이드북 보기</a>
+                    <a href="#kit" class="w-full md:w-auto px-8 py-4 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold text-sm hover:bg-slate-50 transition-colors">웰컴 키트 확인</a>
+                </div>
+            </div>
+            <!-- Background Decoration -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-50 rounded-full -z-10 opacity-60"></div>
+        </section>
+
+        <!-- Main Poster -->
+        <section class="max-w-screen-xl mx-auto px-6 mb-32">
+            <div class="placeholder w-full aspect-[21/9] rounded-[2rem] shadow-2xl relative overflow-hidden group">
+                <div class="absolute inset-0 bg-navy/5 group-hover:bg-transparent transition-colors duration-700"></div>
+                <span class="relative z-10 font-medium">Main Visual / Poster Area (21:9)</span>
+            </div>
+        </section>
+
+        <!-- Information & Location -->
+        <section id="info" class="py-32 bg-slate-50">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                    <div class="space-y-12">
+                        <div>
+                            <h2 class="text-4xl font-bold navy-point mb-6">초기화, 그리고 회복</h2>
+                            <p class="text-lg text-slate-500 leading-relaxed font-light">
+                                RESET은 단순히 멈추는 것이 아닙니다. 창조주께서 설계하신 
+                                원래의 목적과 기쁨을 되찾기 위해 삶의 초점을 다시 맞추는 과정입니다.
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-navy flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold navy-point mb-1">일시</h4>
+                                    <p class="text-sm text-slate-500">2026년 7월 20일(월) ~ 23일(목), 3박 4일</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-navy flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold navy-point mb-1">장소</h4>
+                                    <p class="text-sm text-slate-500">강원도 양양 묵상 스테이 '바다 안개'</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="placeholder aspect-square rounded-[2.5rem] shadow-xl">Location / Map Image</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule (Detailed) -->
+        <section id="schedule" class="py-32">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl font-bold navy-point mb-4">RESET 타임라인</h2>
+                    <p class="text-slate-400">우리의 3박 4일은 이렇게 재설정됩니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Day 1 -->
+                    <div class="p-8 border border-slate-100 rounded-3xl hover:bg-slate-50 transition-colors">
+                        <span class="text-[10px] font-bold text-navy bg-navy/5 px-2 py-1 rounded mb-4 inline-block">Day 01</span>
+                        <h4 class="text-xl font-bold navy-point mb-6">오프라인(OFF)</h4>
+                        <ul class="space-y-4 text-sm text-slate-500">
+                            <li class="flex justify-between"><span>14:00</span> <span>집결 및 디지털 디톡스</span></li>
+                            <li class="flex justify-between"><span>16:00</span> <span>여는 예배: '전원 끄기'</span></li>
+                            <li class="flex justify-between"><span>18:30</span> <span>저녁 식사</span></li>
+                            <li class="flex justify-between"><span>20:00</span> <span>침묵 기도의 밤</span></li>
+                        </ul>
+                    </div>
+                    <!-- Day 2-3 -->
+                    <div class="p-8 border border-slate-100 rounded-3xl bg-navy text-white">
+                        <span class="text-[10px] font-bold text-white bg-white/10 px-2 py-1 rounded mb-4 inline-block">Day 02-03</span>
+                        <h4 class="text-xl font-bold mb-6">재부팅(REBOOT)</h4>
+                        <ul class="space-y-4 text-sm opacity-80">
+                            <li class="flex justify-between"><span>06:00</span> <span>새벽 숲 산책 및 묵상</span></li>
+                            <li class="flex justify-between"><span>10:00</span> <span>주제 강연: '설계도 확인'</span></li>
+                            <li class="flex justify-between"><span>14:00</span> <span>개인 고립 및 쉼</span></li>
+                            <li class="flex justify-between"><span>19:30</span> <span>저녁 집회</span></li>
+                        </ul>
+                    </div>
+                    <!-- Day 4 -->
+                    <div class="p-8 border border-slate-100 rounded-3xl hover:bg-slate-50 transition-colors">
+                        <span class="text-[10px] font-bold text-navy bg-navy/5 px-2 py-1 rounded mb-4 inline-block">Day 04</span>
+                        <h4 class="text-xl font-bold navy-point mb-6">온라인(ON)</h4>
+                        <ul class="space-y-4 text-sm text-slate-500">
+                            <li class="flex justify-between"><span>09:00</span> <span>세상의 빛으로 나가는 약속</span></li>
+                            <li class="flex justify-between"><span>11:00</span> <span>닫는 예배: '업데이트 완료'</span></li>
+                            <li class="flex justify-between"><span>12:30</span> <span>점심 식사 후 해산</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome Kit (Free Benefit) -->
+        <section id="kit" class="py-32 bg-white">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div>
+                        <h2 class="text-4xl font-bold navy-point mb-4">RESET Kit 2026</h2>
+                        <p class="text-slate-500 leading-relaxed max-w-lg">
+                            새로운 시작을 준비하는 모든 분의 여정을 응원하기 위해 <br class="hidden md:block">
+                            수련회 자체 제작 굿즈를 무상으로 증정합니다.
+                        </p>
+                    </div>
+                    <div class="bg-navy text-white px-6 py-4 rounded-2xl flex items-center space-x-4 shadow-xl shadow-navy/20">
+                        <div class="text-2xl font-bold">Free</div>
+                        <div class="text-[10px] font-medium leading-tight opacity-70 uppercase tracking-widest">Only for<br>Participants</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="group">
+                        <div class="placeholder aspect-[4/5] rounded-[2rem] hover-lift mb-6 relative overflow-hidden">
+                            <span class="text-xs">Eco-bag Image</span>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold navy-point uppercase">Linen</div>
+                        </div>
+                        <h4 class="font-bold navy-point mb-1">리넨 에코백</h4>
+                        <p class="text-sm text-slate-400">가벼운 산책을 위한 넉넉한 사이즈</p>
+                    </div>
+                    <div class="group">
+                        <div class="placeholder aspect-[4/5] rounded-[2rem] hover-lift mb-6 relative overflow-hidden">
+                            <span class="text-xs">Diary Image</span>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold navy-point uppercase">Paper</div>
+                        </div>
+                        <h4 class="font-bold navy-point mb-1">RESET 다이어리</h4>
+                        <p class="text-sm text-slate-400">재설정된 일상을 기록하는 80p 노트</p>
+                    </div>
+                    <div class="group">
+                        <div class="placeholder aspect-[4/5] rounded-[2rem] hover-lift mb-6 relative overflow-hidden">
+                            <span class="text-xs">Bottle Image</span>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold navy-point uppercase">Steel</div>
+                        </div>
+                        <h4 class="font-bold navy-point mb-1">매트 텀블러</h4>
+                        <p class="text-sm text-slate-400">환경을 생각하는 스테인리스 소재</p>
+                    </div>
+                    <div class="group">
+                        <div class="placeholder aspect-[4/5] rounded-[2rem] hover-lift mb-6 relative overflow-hidden">
+                            <span class="text-xs">T-shirt Image</span>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold navy-point uppercase">Cotton</div>
+                        </div>
+                        <h4 class="font-bold navy-point mb-1">수련회 티셔츠</h4>
+                        <p class="text-sm text-slate-400">오가닉 코튼의 편안한 데일리룩</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="py-32 px-6">
+            <div class="max-w-screen-xl mx-auto bg-navy rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 italic">Ready to RESET?</h2>
+                    <p class="text-white/60 mb-12 max-w-md mx-auto font-light">
+                        당신의 자리가 마련되어 있습니다. <br>
+                        지금 신청하고 우리와 함께 떠나세요.
+                    </p>
+                    <button class="bg-white text-navy px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-transform shadow-2xl">RESET 시작하기</button>
+                </div>
+                <!-- Decor -->
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-white/5 rounded-full"></div>
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 border-t border-slate-50 bg-white">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-12">
+                <div>
+                    <h3 class="font-bold text-lg navy-point mb-2 italic uppercase">RESET 2026</h3>
+                    <p class="text-xs text-slate-400 tracking-widest uppercase">Church Name Youth Association</p>
+                </div>
+                <div class="flex space-x-12">
+                    <div>
+                        <h5 class="text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em] mb-4">Contact</h5>
+                        <p class="text-xs text-slate-500">reset2026@church.org</p>
+                        <p class="text-xs text-slate-500 mt-1">02-123-4567</p>
+                    </div>
+                    <div>
+                        <h5 class="text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em] mb-4">Social</h5>
+                        <a href="#" class="text-xs text-slate-500 hover:text-navy transition-colors">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-slate-300 uppercase tracking-widest">© 2026 Church Name. ALL RIGHTS RESERVED.</p>
+                <div class="flex space-x-6 text-[10px] font-bold text-slate-300 uppercase">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
